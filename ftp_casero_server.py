@@ -8,9 +8,9 @@ def send_file():
 
 def start_server():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind(('192.168.12.44', 12345))  # Puedes cambiar el puerto si es necesario
+    server_socket.bind(('192.168.207.28', 12345))  # Puedes cambiar el puerto si es necesario
     server_socket.listen(1)
-    status_label.config(text="Esperando conexión...")
+    status_label.config(text="Esperando conexión con el servicio...")
     global client_socket
     client_socket, addr = server_socket.accept()
     status_label.config(text=f"Conectado: {addr}")
